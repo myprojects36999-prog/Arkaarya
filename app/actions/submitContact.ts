@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { DB } from "@/lib/db";
+import { sendLeadNotification } from "@/lib/email";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -32,12 +33,17 @@ export async function submitContact(formData: FormData) {
     ].filter(Boolean).join("\n");
 
     // Save to Database
-    const result = await DB.contactMessages.create({
+    const dbPayload = {
       name: validatedData.name,
       email: validatedData.email,
       company: validatedData.company,
       message: fullMessage || "Corporate Inquiry (no additional details)",
-    });
+    };
+    
+    const result = await DB.contactMessages.create(dbPayload);
+
+    // Send email notification
+    await sendLeadNotification(dbPayload);
 
     return { success: true, data: result };
   } catch (error: unknown) {

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Recycle } from "lucide-react";
+import { Recycle, Handshake } from "lucide-react";
 import { createClient } from "@/lib/supabase-browser";
 
 interface FooterProps {
@@ -242,9 +242,7 @@ export const Footer: React.FC<FooterProps> = () => {
           <div className="shrink-0 flex items-center justify-center lg:justify-end gap-4">
             <span className="flex items-center gap-1">
               Made with{" "}
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="#629A13" className="mx-0.5" aria-hidden>
-                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-              </svg>{" "}
+              <Handshake size={16} className="text-[#629A13] mx-0.5" aria-hidden="true" />{" "}
               <a href="https://www.aatomate.com" target="_blank" rel="noreferrer" className="text-[#629A13] hover:text-[#7DC018] font-semibold transition-colors">
                 aatomate
               </a>

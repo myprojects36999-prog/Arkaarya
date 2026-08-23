@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { DB } from "@/lib/db";
+import { sendJobNotification } from "@/lib/email";
 
 const applicationSchema = z.object({
   jobId: z.string().optional(),
@@ -49,6 +50,9 @@ export async function submitApplication(formData: FormData) {
     };
 
     await DB.jobApplications.create(applicationData);
+
+    // Send email notification
+    await sendJobNotification(applicationData);
 
     return { success: true };
   } catch (error) {

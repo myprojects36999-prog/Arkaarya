@@ -1,7 +1,7 @@
 import React from "react";
 import { notFound } from "next/navigation";
 import { createAdminClient } from "@/lib/supabase-admin";
-import { ArrowLeft, MapPin, Building, Phone, Mail, Box, Clock, ShieldAlert, FileText, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, MapPin, Building, Phone, Mail, Box, Clock, ShieldAlert, FileText, CheckCircle2, Image as ImageIcon } from "lucide-react";
 import { UpdatePickupStatusModal } from "../UpdatePickupStatusModal";
 import { PickupOperations } from "./PickupOperations";
 import { PrintButton } from "./PrintButton";
@@ -116,14 +116,47 @@ export default async function PickupDetailsPage({ params }: { params: { id: stri
             <div className="p-6 space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">Asset Category</p>
-                  <p className="font-semibold text-[#00264A]">{pickup.pickup_type || "E-Waste"}</p>
+                  <p className="text-sm text-gray-500 mb-1">Pickup Type</p>
+                  <p className="font-semibold text-[#00264A]">{pickup.pickup_type || "Not specified"}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">What do they need?</p>
+                  <p className="font-semibold text-[#00264A]">{pickup.need || "Not specified"}</p>
+                </div>
+                <div>
+                  <p className="text-sm text-gray-500 mb-1">Condition</p>
+                  <p className="font-semibold text-[#00264A]">{pickup.condition || "Not specified"}</p>
                 </div>
                 <div>
                   <p className="text-sm text-gray-500 mb-1">Estimated Weight/Quantity</p>
-                  <p className="font-semibold text-[#00264A]">{pickup.estimated_weight || "Not specified"}</p>
+                  <p className="font-semibold text-[#00264A]">{pickup.estimated_weight || pickup.quantity || "Not specified"}</p>
                 </div>
+                {pickup.items && (
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Number of Items</p>
+                    <p className="font-semibold text-[#00264A]">{pickup.items}</p>
+                  </div>
+                )}
+                {pickup.data_destruction && (
+                  <div>
+                    <p className="text-sm text-gray-500 mb-1">Data Destruction</p>
+                    <p className="font-semibold text-[#00264A]">{pickup.data_destruction}</p>
+                  </div>
+                )}
               </div>
+
+              {pickup.categories && pickup.categories.length > 0 && (
+                <div className="pt-4 border-t border-[#E3E8E4] print:border-gray-300">
+                  <p className="text-sm text-gray-500 mb-2">E-Waste Categories</p>
+                  <div className="flex flex-wrap gap-2">
+                    {pickup.categories.map((cat: string, idx: number) => (
+                      <span key={idx} className="px-3 py-1 bg-[#F8FAF7] border border-[#E3E8E4] rounded-lg text-sm text-[#00264A]">
+                        {cat}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
               
               <div className="pt-4 border-t border-[#E3E8E4] print:border-gray-300">
                 <p className="text-sm text-gray-500 mb-2 flex items-center gap-1"><MapPin size={14} /> Pickup Address</p>
@@ -160,6 +193,21 @@ export default async function PickupDetailsPage({ params }: { params: { id: stri
                   </div>
                 </div>
               )}
+
+              {pickup.photos && pickup.photos.length > 0 && (
+                <div className="pt-4 border-t border-[#E3E8E4] print:border-gray-300">
+                  <p className="text-sm font-bold text-[#00264A] mb-2 flex items-center gap-1">
+                    <ImageIcon size={14} className="text-[#629A13] print:text-[#00264A]" /> Uploaded Photos
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    {pickup.photos.map((photo: string, index: number) => (
+                      <a key={index} href={photo} target="_blank" rel="noopener noreferrer" className="block relative w-32 h-32 rounded-xl overflow-hidden border border-[#E3E8E4] hover:shadow-md transition-shadow">
+                        <img src={photo} alt={`Pickup Photo ${index + 1}`} className="w-full h-full object-cover" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -181,6 +229,12 @@ export default async function PickupDetailsPage({ params }: { params: { id: stri
                 <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Preferred Time</p>
                 <p className="font-semibold text-[#00264A]">{pickup.preferred_time || "Business Hours"}</p>
               </div>
+              {pickup.urgency && (
+                <div>
+                  <p className="text-xs text-gray-500 uppercase tracking-wider font-bold mb-1">Urgency</p>
+                  <p className="font-semibold text-[#00264A]">{pickup.urgency}</p>
+                </div>
+              )}
             </div>
           </div>
 

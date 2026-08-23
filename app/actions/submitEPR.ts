@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { DB } from "@/lib/db";
+import { sendEprNotification } from "@/lib/email";
 
 const eprSchema = z.object({
   companyName: z.string().min(2, "Company name is required"),
@@ -29,7 +30,7 @@ export async function submitEPRInquiry(formData: FormData) {
     const validatedData = eprSchema.parse(rawData);
 
     // Save to Database
-    const result = await DB.eprInquiries.create({
+    const dbPayload = {
       companyName: validatedData.companyName,
       contactPerson: validatedData.contactPerson,
       email: validatedData.email,
@@ -37,7 +38,11 @@ export async function submitEPRInquiry(formData: FormData) {
       ewasteCategory: validatedData.ewasteCategory,
       estimatedVolume: validatedData.estimatedVolume,
       message: validatedData.message || "",
-    });
+    };
+    const result = await DB.eprInquiries.create(dbPayload);
+
+    // Send email notification
+    await sendEprNotification(dbPayload);
 
     return { success: true, data: result };
   } catch (error: unknown) {

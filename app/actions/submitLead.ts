@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { DB } from "@/lib/db";
+import { sendLeadNotification } from "@/lib/email";
 
 const leadSchema = z.object({
   email: z.string().email("Invalid email address"),
@@ -27,6 +28,9 @@ export async function submitLead(formData: FormData) {
 
     // Save to Database via abstraction layer
     const result = await DB.leads.create(validatedData);
+
+    // Send email notification
+    await sendLeadNotification(validatedData);
 
     return { success: true, data: result };
   } catch (error: unknown) {

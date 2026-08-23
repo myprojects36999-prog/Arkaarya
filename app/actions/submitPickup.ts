@@ -2,6 +2,7 @@
 
 import { z } from "zod";
 import { DB } from "@/lib/db";
+import { sendPickupNotification } from "@/lib/email";
 
 const pickupSchema = z.object({
   pickupId: z.string(),
@@ -77,6 +78,9 @@ export async function submitPickupRequest(formData: FormData) {
     };
     
     const result = await DB.pickupRequests.create(dbPayload);
+
+    // Send email notification
+    await sendPickupNotification(dbPayload as any);
 
     return { success: true, data: result };
   } catch (error: unknown) {
