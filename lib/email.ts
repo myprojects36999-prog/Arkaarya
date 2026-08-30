@@ -117,7 +117,7 @@ export async function sendPickupNotification(data: PickupRequestData) {
       </div>
       
       <div style="background-color: #f1f5f9; padding: 16px; text-align: center; font-size: 12px; color: #64748b;">
-        <p style="margin: 0;">&copy; ${new Date().getFullYear()} Arka Arya. All rights reserved.</p>
+        <p style="margin: 0;">&copy; ${new Date().getFullYear()} ArkaArya Private Limited. All Rights Reserved.</p>
       </div>
     </div>
   `;

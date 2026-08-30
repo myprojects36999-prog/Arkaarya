@@ -211,7 +211,7 @@ export const Footer: React.FC<FooterProps> = () => {
           
           {/* Left: Copyright */}
           <div className="shrink-0 text-center lg:text-left">
-            <span>© {new Date().getFullYear()} ArkaArya Pvt. Ltd.</span>
+            <span>© {new Date().getFullYear()} ArkaArya Private Limited. All Rights Reserved.</span>
           </div>
           
           {/* Center: Brand Pillars */}

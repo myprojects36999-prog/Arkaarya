@@ -27,7 +27,7 @@ export default function MaintenanceView() {
       </div>
       
       <div className="mt-8 text-xs text-gray-400">
-        &copy; {new Date().getFullYear()} ArkaArya. All rights reserved.
+        &copy; {new Date().getFullYear()} ArkaArya Private Limited. All Rights Reserved.
       </div>
     </div>
   );
