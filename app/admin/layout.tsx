@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 import { LayoutDashboard, Users, Briefcase, Truck, FileText, Settings, DollarSign, LogOut, Building2, HeartHandshake, Star, BarChart, ShieldCheck, Scale, Inbox } from "lucide-react";
 import { createClient } from "@/lib/supabase-server";
-import AutoAdjustZoom from "./AutoAdjustZoom";
 
 export default async function AdminLayout({
   children,
@@ -20,7 +19,6 @@ export default async function AdminLayout({
 
   return (
     <div className="min-h-screen bg-[#F8FAF7] flex relative">
-      <AutoAdjustZoom />
       {/* Sidebar Navigation */}
       <aside className="w-64 bg-white border-r border-[#E3E8E4] flex flex-col fixed inset-y-0 z-10 overflow-y-auto print:hidden">
         <div className="p-6">
