@@ -41,13 +41,13 @@ export const Footer: React.FC<FooterProps> = () => {
         <div className="max-w-[1200px] mx-auto px-6 sm:px-8 lg:px-12 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-[#629A13] mb-2">
-              Certified Sustainable Recycling
+              Sustainable Recycling
             </p>
             <h3 className="text-lg sm:text-xl font-semibold text-white max-w-lg leading-snug">
               Ready to eliminate electronic waste liability responsibly?
             </h3>
             <p className="text-sm text-[#7A9AB4] mt-1 max-w-md">
-              CPCB Form-6 manifests · Zero-landfill processing · NIST 800-88 data sanitization
+              Zero-landfill processing · Data sanitization
             </p>
           </div>
           <Link
@@ -73,17 +73,7 @@ export const Footer: React.FC<FooterProps> = () => {
               India's leading technology-driven e-waste recycler and circular economy enterprise — committed to zero-landfill operations.
             </p>
 
-            {/* Certifications */}
-            <div className="flex flex-col gap-1.5">
-              {["CPCB Authorized", "ISO 14001:2015", "NIST 800-88"].map((cert) => (
-                <span key={cert} className="flex items-center gap-2 text-xs text-[#629A13] font-medium">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden>
-                    <path d="M20 6L9 17l-5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                  {cert}
-                </span>
-              ))}
-            </div>
+
 
             {/* Social Icons — real SVGs */}
             <div className="flex items-center gap-2 pt-1">

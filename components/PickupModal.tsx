@@ -36,7 +36,7 @@ export const PickupModal: React.FC<PickupModalProps> = ({ isOpen, onClose, initi
     setSubmitted(true);
   };
 
-  const trackingId = "ARKA-CPCB-" + Math.floor(100000 + Math.random() * 900000);
+  const trackingId = "ARKA-ITAD-" + Math.floor(100000 + Math.random() * 900000);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#001A33]/80 backdrop-blur-md animate-in fade-in duration-200">
@@ -56,10 +56,10 @@ export const PickupModal: React.FC<PickupModalProps> = ({ isOpen, onClose, initi
             <div className="mb-6">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF5DC] text-[#629A13] text-xs font-semibold uppercase tracking-wider mb-2">
                 <Truck size={14} />
-                <span>CPCB Authorized Logistics</span>
+                <span>Secure Enterprise Logistics</span>
               </div>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#00264A]">
-                Schedule Certified E-Waste Pickup
+                Schedule Secure E-Waste Pickup
               </h2>
               <p className="text-xs sm:text-sm text-[#5E6672] mt-1">
                 Enter your organization details below. Our GPS-monitored fleet will dispatch for secure doorstep collection and issue legal Form-6 manifests.

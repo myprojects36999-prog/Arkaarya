@@ -435,20 +435,7 @@ export const StatsBar: React.FC = () => {
         </div>
         )}
 
-        {/* Bottom Trust Assurance Bar */}
-        <div className="mt-10 pt-6 border-t border-[#E3E8E4] flex flex-wrap items-center justify-between gap-4 text-xs text-[#5E6672]">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#629A13]" />
-            <span>Audited under E-Waste (Management) Rules, 2022</span>
-          </div>
-          <div className="flex items-center gap-4">
-            <span className="font-semibold text-[#00264A]">ISO 14001:2015</span>
-            <span>•</span>
-            <span className="font-semibold text-[#00264A]">ISO 27001 Certified</span>
-            <span>•</span>
-            <span className="font-semibold text-[#00264A]">CPCB Authorized Recycler</span>
-          </div>
-        </div>
+
 
       </div>
     </section>

@@ -122,17 +122,7 @@ export default function IndustryPage() {
                 </Link>
               </div>
               
-              {/* Trust markers */}
-              <div className="flex items-center gap-6 mt-8 pt-8 border-t border-[#E3E8E4]">
-                <div className="flex items-center gap-2 text-sm font-semibold text-[#00264A]">
-                  <ShieldCheck size={18} className="text-[#629A13]" />
-                  CPCB Authorized
-                </div>
-                <div className="flex items-center gap-2 text-sm font-semibold text-[#00264A]">
-                  <ShieldAlert size={18} className="text-[#629A13]" />
-                  NIST 800-88 Wiping
-                </div>
-              </div>
+
             </motion.div>
 
             {/* Right Interactive Visual */}
@@ -175,7 +165,7 @@ export default function IndustryPage() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Absolute Data Security</h3>
                 <p className="text-[#94a3b8] leading-relaxed">
-                  We guarantee that every storage device, server, and endpoint is either degaussed, physically shredded, or wiped to DoD/NIST standards on-site or off-site.
+                  We guarantee that every storage device, server, and endpoint is either degaussed, physically shredded, or securely wiped on-site or off-site.
                 </p>
               </div>
 

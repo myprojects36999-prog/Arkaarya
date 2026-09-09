@@ -62,7 +62,7 @@ export const ImpactCalculator: React.FC<ImpactCalculatorProps> = ({
             Estimate Your Environmental Impact
           </h2>
           <p className="text-xs sm:text-sm text-[#5E6672] mt-1">
-            Adjust the sliders below to calculate the certified carbon offset, secondary mineral recovery, and tree equivalence of recycling your electronic assets.
+            Adjust the sliders below to calculate the carbon offset, secondary mineral recovery, and tree equivalence of recycling your electronic assets.
           </p>
         </div>
 
@@ -169,13 +169,13 @@ export const ImpactCalculator: React.FC<ImpactCalculatorProps> = ({
         {/* Modal CTA */}
         <div className="flex flex-col sm:flex-row gap-3 items-center justify-between pt-4 border-t border-[#E3E8E4]">
           <span className="text-xs text-[#5E6672]">
-            * Calculated via CPCB verified Life Cycle Assessment (LCA) mass models.
+            * Calculated via Life Cycle Assessment (LCA) mass models.
           </span>
           <button
             onClick={handleProceed}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-[#629A13] hover:bg-[#528210] text-white font-semibold text-sm btn-eco-glow transition-all active:scale-95 border border-[#629A13]"
           >
-            <span>Proceed to Certified Pickup</span>
+            <span>Proceed to Secure Pickup</span>
             <ArrowRight size={16} />
           </button>
         </div>

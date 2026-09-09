@@ -47,7 +47,7 @@ export default async function PickupDetailsPage({ params }: { params: { id: stri
         <img src="/ArkaAryaPvtLtd_Logo_v3.0.png" alt="ArkaArya" className="h-16 w-auto object-contain mb-4" />
         <h1 className="text-3xl font-serif font-bold text-[#00264A] uppercase tracking-wider">E-Waste Pickup Manifest</h1>
         <p className="text-sm font-semibold text-gray-500 mt-2">Document ID: {pickup.pickup_id} | Printed on: {new Date().toLocaleDateString('en-IN')}</p>
-        <p className="text-xs text-gray-400 mt-1">Authorized by Central Pollution Control Board (CPCB)</p>
+
       </div>
 
       {/* Header & Breadcrumb */}

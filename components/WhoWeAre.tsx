@@ -33,8 +33,8 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = () => {
       icon: Leaf,
     },
     {
-      title: "Cryptographic Data Sanitization",
-      desc: "Military-grade data destruction (NIST 800-88) ensuring complete enterprise data security before recycling.",
+      title: "Data Destruction",
+      desc: "Military-grade data destruction ensuring complete enterprise data security before recycling.",
       icon: Lock,
     },
     {
@@ -49,12 +49,6 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = () => {
     },
   ];
 
-  const trustBadges = [
-    "CPCB Authorized",
-    "ISO 14001:2015",
-    "ISO 27001",
-    "Pan-India Reach"
-  ];
 
   return (
     <section 
@@ -178,20 +172,7 @@ export const WhoWeAre: React.FC<WhoWeAreProps> = () => {
                 </div>
               </div>
 
-              {/* Bottom Trust Indicators */}
-              <div className="relative z-10 mt-8 pt-5 border-t border-white/10">
-                <div className="flex flex-wrap gap-2">
-                  {trustBadges.map((badge, bIdx) => (
-                    <div
-                      key={bIdx}
-                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[10px] font-semibold text-gray-300"
-                    >
-                      <CheckCircle2 size={12} className="text-[#629A13]" />
-                      <span>{badge}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+
 
             </motion.div>
           </div>

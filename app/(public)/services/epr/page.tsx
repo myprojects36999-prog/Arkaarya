@@ -45,11 +45,11 @@ export default function EPRServicePage() {
             <div>
               <h2 className="text-3xl font-bold text-[#00264A] mb-6">Simplify Your EPR Compliance</h2>
               <p className="text-[#4A5568] leading-relaxed mb-6 text-lg">
-                Navigating the complexities of EPR regulations can be challenging. At ArkaArya, we act as your strategic partner to ensure full compliance with the Central Pollution Control Board (CPCB) guidelines.
+                Navigating the complexities of EPR regulations can be challenging. At ArkaArya, we act as your strategic partner to ensure full compliance with environmental guidelines.
               </p>
               <ul className="space-y-4">
                 {[
-                  "CPCB EPR Authorization & Registration",
+                  "EPR Authorization & Registration",
                   "E-Waste Collection Target Achievement",
                   "Filing of Quarterly & Annual Returns",
                   "Auditable Trail & Zero-Landfill Reporting",

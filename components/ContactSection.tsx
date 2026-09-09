@@ -64,7 +64,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                 Connect with our Circular Team
               </h2>
               <p className="text-sm sm:text-base text-[#5E6672] mt-3 leading-relaxed">
-                Whether you need immediate CPCB-compliant ITAD collection, EPR advisory, or certified on-site data destruction, our engineering team responds within 2 business hours.
+                Whether you need immediate ITAD collection, EPR advisory, or secure on-site data destruction, our engineering team responds within 2 business hours.
               </p>
             </div>
 
@@ -211,7 +211,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                     >
                       <option value="Corporate IT Asset Disposal (ITAD)">Corporate IT Asset Disposal (ITAD)</option>
                       <option value="EPR Compliance & Target Fulfillment">EPR Compliance & Target Fulfillment</option>
-                      <option value="Certified NIST 800-88 Data Sanitization">Certified NIST 800-88 Data Sanitization</option>
+                      <option value="Secure Data Sanitization">Secure Data Sanitization</option>
                       <option value="Closed-Loop Urban Mining & Material Refining">Closed-Loop Urban Mining</option>
                       <option value="General Enterprise Consultation">General Consultation</option>
                     </select>

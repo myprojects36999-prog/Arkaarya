@@ -6,28 +6,7 @@ import { createClient } from "@/lib/supabase-browser";
 import { useAutoScroll } from "@/hooks/useAutoScroll";
 
 export const Testimonials: React.FC = () => {
-  const certifications = [
-    {
-      icon: ShieldCheck,
-      title: "CPCB Authorized",
-      subtitle: "Ministry of Environment & Climate",
-    },
-    {
-      icon: Award,
-      title: "ISO 14001:2015",
-      subtitle: "Environmental Management System",
-    },
-    {
-      icon: Lock,
-      title: "ISO 27001:2022",
-      subtitle: "Information Security Standard",
-    },
-    {
-      icon: FileText,
-      title: "NIST 800-88",
-      subtitle: "Cryptographic Data Sanitization",
-    },
-  ];
+
 
   const [testimonials, setTestimonials] = useState<any[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -62,41 +41,6 @@ export const Testimonials: React.FC = () => {
     <section id="testimonials" className="w-full py-20 bg-[#F8FAF7] border-b border-[#E3E8E4]">
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-12">
         
-        {/* Compliance & Standards Strip */}
-        <div className="mb-20">
-          <div className="text-center max-w-2xl mx-auto mb-10">
-            <span className="text-xs font-bold text-[#629A13] uppercase tracking-widest block mb-2">
-              Statutory Governance & Accreditations
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-serif font-bold text-[#00264A] tracking-tight">
-              Rigorous Industrial Certifications
-            </h2>
-          </div>
-
-          <div ref={certScrollRef} className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-6 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-            {certifications.map((cert, idx) => {
-              const Icon = cert.icon;
-              return (
-                <div
-                  key={idx}
-                  className="p-6 rounded-2xl bg-[#F8FAF7] border border-[#E3E8E4] flex items-center gap-4 shadow-sm hover:border-[#629A13]/50 transition-colors min-w-[85vw] sm:min-w-[60vw] md:min-w-0 snap-center"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-white border border-[#E3E8E4] text-[#629A13] flex items-center justify-center shrink-0">
-                    <Icon size={22} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-sm text-[#00264A] font-display">
-                      {cert.title}
-                    </div>
-                    <div className="text-xs text-[#5E6672]">
-                      {cert.subtitle}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
 
         {/* Testimonials Section */}
         <div>
@@ -104,9 +48,18 @@ export const Testimonials: React.FC = () => {
             <span className="text-xs font-bold text-[#629A13] uppercase tracking-widest block mb-2">
               Client Endorsements
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#00264A] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-[#00264A] tracking-tight mb-6">
               Trusted by Industry Leaders
             </h2>
+            <a 
+              href="https://g.page/r/CfLa9tyVoP5CEBM/review" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white border border-[#E3E8E4] text-[#00264A] font-bold hover:border-[#629A13] hover:text-[#629A13] transition-colors shadow-sm text-sm"
+            >
+              <Star className="text-[#FABB05]" size={18} fill="#FABB05" />
+              Review us on Google
+            </a>
           </div>
 
           {isLoading ? (

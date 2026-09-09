@@ -63,7 +63,7 @@ const SOLUTIONS = [
   {
     num: "02",
     title: "Secure Data Destruction",
-    desc: "Military-grade data wiping (NIST 800-88) and physical shredding of hard drives, ensuring absolute privacy compliance.",
+    desc: "Military-grade data wiping and physical shredding of hard drives, ensuring absolute privacy compliance.",
     icon: HardDrive,
     image: "/enterprise_ewaste_facility.jpg"
   },
@@ -85,7 +85,7 @@ const SOLUTIONS = [
 
 const FLOW_STEPS = [
   { id: 1, title: "SECURE COLLECTION", desc: "GPS-tracked fleet collection from your enterprise facilities directly to our secure processing hubs." },
-  { id: 2, title: "DATA DESTRUCTION", desc: "Immediate data wiping to NIST 800-88 standards or physical drive shredding with serialized certificates." },
+  { id: 2, title: "DATA DESTRUCTION", desc: "Immediate data wiping or physical drive shredding with serialized certificates." },
   { id: 3, title: "ASSET REFURBISHMENT", desc: "Triaging viable equipment for lifecycle extension to maximize your financial return and environmental impact." },
   { id: 4, title: "MATERIAL RECOVERY", desc: "Automated extraction of precious metals and critical materials from end-of-life components." },
   { id: 5, title: "ZERO LANDFILL CERTIFICATION", desc: "Issuance of fully auditable Green Certificates and ESG compliance reporting." }
@@ -104,7 +104,7 @@ const WHY_GREEN = [
   },
   {
     title: "Regulatory Compliance",
-    desc: "Fully certified by CPCB, delivering complete peace of mind for EPR mandates.",
+    desc: "Fully compliant, delivering complete peace of mind for EPR mandates.",
     icon: CheckCircle2
   },
   {
@@ -317,7 +317,7 @@ export default function ArkaAryaGreen() {
               Certified Circular Stewardship.
             </h2>
             <p className="text-[#5E6672] text-lg leading-relaxed">
-              We bridge the gap between corporate technology lifecycle management and environmental responsibility, ensuring 100% compliance with CPCB regulations.
+              We bridge the gap between corporate technology lifecycle management and environmental responsibility, ensuring 100% compliance with environmental regulations.
             </p>
           </div>
 

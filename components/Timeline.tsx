@@ -52,10 +52,10 @@ export const Timeline: React.FC<TimelineProps> = () => {
       id: "destruction",
       number: "03",
       title: "Cryptographic Data Destruction",
-      subtitle: "NIST 800-88 & Physical Micro-Shredding",
-      description: "High-gauss magnetic degaussing followed by sub-2mm physical disk shredding with serialized video certificates.",
-      icon: Lock,
-      tag: "NIST 800-88 Certified",
+      subtitle: "Secure & Physical Micro-Shredding",
+      description: "Complete elimination of data liability through multi-pass wiping and physical media destruction.",
+      icon: ShieldCheck,
+      tag: "Secure Data Wiping",
     },
     {
       id: "recovery",
@@ -71,9 +71,9 @@ export const Timeline: React.FC<TimelineProps> = () => {
       number: "05",
       title: "ESG Compliance & Reporting",
       subtitle: "Automated Form-6 & Scope-3 Ledgers",
-      description: "Direct filing on the Central Pollution Control Board (CPCB) portal with certified Form-6 green manifests.",
+      description: "Automated ESG compliance and Scope-3 Ledgers generation.",
       icon: FileCheck,
-      tag: "CPCB Portal Filing",
+      tag: "Compliance & Reporting",
     },
   ];
 
@@ -425,9 +425,9 @@ export const Timeline: React.FC<TimelineProps> = () => {
                     >
                       {/* Telemetry Status */}
                       <div className="grid grid-cols-3 gap-2">
-                        <div className="bg-white/08 rounded-lg p-2 border border-white/10">
-                          <div className="text-[8px] text-[#EBF5DC] font-mono">STANDARD</div>
-                          <div className="text-xs font-bold text-[#629A13] mt-0.5">NIST 800-88</div>
+                        <div className="bg-[#121212] rounded-lg p-2 border border-white/10">
+                          <div className="text-[8px] text-[#5E6672] font-mono">PROTOCOL</div>
+                          <div className="text-xs font-bold text-[#629A13] mt-0.5">SECURE</div>
                         </div>
                         <div className="bg-white/08 rounded-lg p-2 border border-white/10">
                           <div className="text-[8px] text-[#EBF5DC] font-mono">DEGAUSS FIELD</div>
@@ -600,7 +600,7 @@ export const Timeline: React.FC<TimelineProps> = () => {
                       {/* Telemetry Status */}
                       <div className="grid grid-cols-3 gap-2">
                         <div className="bg-white/08 rounded-lg p-2 border border-white/10">
-                          <div className="text-[8px] text-[#EBF5DC] font-mono">CPCB FILING</div>
+                          <div className="text-[8px] text-[#EBF5DC] font-mono">COMPLIANCE</div>
                           <div className="text-xs font-bold text-[#629A13] mt-0.5">Form-6 Manifest</div>
                         </div>
                         <div className="bg-white/08 rounded-lg p-2 border border-white/10">
@@ -619,7 +619,7 @@ export const Timeline: React.FC<TimelineProps> = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-1.5">
                             <FileCheck size={16} className="text-[#629A13]" />
-                            <span className="text-[10px] font-bold font-mono">CPCB CERTIFICATE #ARK-EPR-2026</span>
+                            <span className="text-[10px] font-bold font-mono">COMPLIANCE CERTIFICATE #ARK-EPR-2026</span>
                           </div>
                           <span className="px-2 py-0.5 rounded-full bg-[#629A13] text-white text-[8px] font-bold">
                             SEALED & FILED
@@ -657,7 +657,7 @@ export const Timeline: React.FC<TimelineProps> = () => {
                           <Activity size={12} className="text-[#629A13]" />
                           <span>Statutory Credit Transfer Active</span>
                         </span>
-                        <span className="font-mono text-[#629A13] font-bold">100% CPCB Portal Integration</span>
+                        <span className="font-mono text-[#629A13] font-bold">100% ESG Portal Integration</span>
                       </div>
                     </motion.div>
                   )}
